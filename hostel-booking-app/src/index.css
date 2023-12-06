@@ -81,10 +81,7 @@ body{
   backdrop-filter: blur(10px);
 }
 .login-input{
-  border: 1px solid rgba(240, 255, 255, 0.606);
-}
-.login-input::placeholder{
-  color: rgba(240, 255, 255, 0.577);
+  border: 1px solid rgba(138, 138, 138, 0.606);
 }
 .pointer{
   cursor: pointer;

@@ -5,8 +5,8 @@ import { useContext } from 'react'
 const Index = () => {
     let { email, password, setEmail, setPassword, message, setAccount } = useContext(AuthContext)
     return (
-        <div className=" d-flex align-items-center justify-content-center loginbg fullpage">
-            <div className="d-lg-flex py-5 px-3 px-lg-0 custom-shadow logincontainer rounded">
+        <div className=" d-flex align-items-center justify-content-center fullpage" style={{backgroundColor : "#f2f2f2"}}>
+            <div className="d-lg-flex py-5 px-3 px-lg-0 custom-shadow bg-light rounded">
                 <div className='mx-4'>
                     <p className='text-center'><FaHotel size={40} className='my-3'/><p>Hostel Booking System</p></p>
                     <Input label="Email" placeholder={'example@email.com'} inputType={'text'} value={email} setter={setEmail} />

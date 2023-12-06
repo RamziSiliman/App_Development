@@ -1,17 +1,12 @@
 import Hostel from "./Hostel"
-import { useContext,useEffect,useLayoutEffect,useState } from "react"
+import { useContext,useEffect,useState } from "react"
+import {getHostels} from '../EXtras/GetterFunctions'
 import DataContext from "../context/DataContext"
-import {FaBackward, FaForward} from 'react-icons/fa'
 const AllHostels = () => {
-    let {hostels,page,pageSize,setPage, pages} = useContext(DataContext)
+    let {hostels,setHostels, URL} = useContext(DataContext)
     let [load, setLoad] = useState(true)
-    let pageNumbers = []
-    for(let i =0;i<pages;i++){
-        pageNumbers.push(i+1)
-        console.log(pageNumbers.length)
-    }
     useEffect(()=>{
-        setLoad(false)
+        getHostels(URL, setHostels, setLoad)
     },[])
     return (
         <>
@@ -22,18 +17,11 @@ const AllHostels = () => {
             <p className="text-center my-4">Discover Hostels near Makerere</p>
             <div className="row gap-3 justify-content-center container" id="allhostels">
                 {
-                    (hostels.slice((page-1)*pageSize, (pageSize*page))).map(hostel=>(
-                        <Hostel hostel={hostel} key={hostel.name}/>
-                    ))
+                   hostels.length > 0 ?  hostels.map(hostel=>(
+                    <Hostel hostel={hostel} key={hostel.id}/>
+                )): <h1>No Hostels Found</h1>
                 }
             </div>
-           <div className="d-flex my-5 justify-content-center align-items-center">
-            <FaBackward className="pointer" onClick={()=>setPage(page >1 ? page-1: 1)}/>
-           {
-                pageNumbers.map(pageNumber=><span onClick={()=>setPage(pageNumber)} className={`mx-3 ${page===pageNumber?'bg-primary px-2 text-light rounded': ''} pointer`}>{pageNumber}</span>)
-            }
-            <FaForward className="pointer" onClick={()=>setPage(page >=0 && page < pages ? page+1: pages)}/>
-           </div>
         </div>
             </>
         }
