@@ -14,26 +14,15 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def get_token(cls, user):
         token = super().get_token(user)
         token['groups'] = [group.name for group in user.groups.all()] 
-
         return token
-
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
-
-
-
-
 @api_view(['GET', 'POST'])
 def getUsers(request,pk):
     users = User.objects.all()
-
     # try:
     if request.method == "POST":
-            
-            
-
             # assign a user to a group
-         
             if pk== "student":
                 group = Group.objects.get(name="student")
             elif pk == "manager":
@@ -69,7 +58,6 @@ def Hostels(request):
         return Response(converted.data)
     except:
         return Response(status=status.HTTP_400_BAD_REQUEST)
-    
 
 @api_view(['GET'])
 def getHostel(request,pk):
@@ -79,7 +67,6 @@ def getHostel(request,pk):
         return Response(converted.data)
     except:
         return Response(status=status.HTTP_204_NO_CONTENT)
-    
 
 # functional based view for retrieving all rooms in a specified hostel from the database     
 @api_view(['GET','POST'])
@@ -100,7 +87,6 @@ def hostelRooms(request, pk):
     except:
         return Response(status=status.HTTP_400_BAD_REQUEST)
     
-
 # function based view for making a reservation  and retrieving previous reservations
 @api_view(['GET', 'POST'])
 def reservation(request, pk):
@@ -123,7 +109,6 @@ def reservation(request, pk):
     except:
         return Response(status=status.HTTP_400_BAD_REQUEST)
 
-
 @api_view(['GET'])
 def myHostel(request, pk):
     try: 
@@ -133,7 +118,6 @@ def myHostel(request, pk):
     converted = HostelSerializer(hostel)
     return Response(converted.data)
         
-
 @api_view(['GET','POST'])
 def getReservations(request, pk):
     # try:
