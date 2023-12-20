@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 const Navbar = ({ options, fixed, theme }) => {
 
-
     let Logo = <svg xmlns="http://www.w3.org/2000/svg" width="100" height="56.66" viewBox="0 0 166 56.66">
         <g id="Group_1" data-name="Group 1" transform="translate(-319 -174.34)">
             <text id="E-BROCKER" transform="translate(376 216)" fill="#fff" font-size="20" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">E-BROCKER</tspan></text>
@@ -10,7 +9,6 @@ const Navbar = ({ options, fixed, theme }) => {
             <rect id="Rectangle_1" data-name="Rectangle 1" width="162" height="5" rx="2.5" transform="translate(323 226)" fill="#fff" />
         </g>
     </svg>
-
     return (
         <div className={`navbar navbar-expand-lg ${theme == 'dark' ? 'bg-dark' : ''} navbar-dark text-light ${fixed && 'fixed-top'}`}>
             <div className="container">
@@ -46,5 +44,4 @@ const Navbar = ({ options, fixed, theme }) => {
         </div>
     )
 }
-
 export default Navbar
