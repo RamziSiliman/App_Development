@@ -12,14 +12,10 @@ const Footer = () => {
                <div className="d-flex align-items-center justify-content-center">
                <Link to="http://www.instagram/v.in.ce.nt._" className='nav-link'><FaInstagram className='mx-1' size={23}/> </Link>
                 <Link to="http://www.linkedin.com/kigongovincent" className='nav-link'><FaLinkedin className='mx-1' size={23}/></Link>
-                
                 <Link to="http://www.youtube.com/@stemsdj" className='nav-link'><FaYoutube className='mx-1' size={23}/></Link>
-               </div>
-                
-                
+               </div>   
             </div>
     </div>
   )
 }
-
 export default Footer
