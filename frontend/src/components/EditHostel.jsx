@@ -37,5 +37,4 @@ const EditHostel = () => {
   </div>
   )
 }
-
 export default EditHostel
