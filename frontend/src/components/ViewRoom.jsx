@@ -35,5 +35,4 @@ const {SERVER_URL} = useContext(AuthContext)
   </div>
   )
 }
-
 export default ViewRoom
