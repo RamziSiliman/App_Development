@@ -13,10 +13,8 @@ const Hostel = ({hostel}) => {
         <p className='opacity-75'>Location, {hostel.address}</p>
         <Link to={`/student/hostel/${hostel.id}`} className='nav-link'>
         <button className='btn btn-light px-4 py-2 border-0 rounded'><small>View all rooms</small><FaArrowAltCircleRight className='mx-2'/></button>
-      
         </Link>
     </div>
   )
 }
-
 export default Hostel
