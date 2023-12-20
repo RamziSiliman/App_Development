@@ -13,11 +13,10 @@ const Statistics = ({statistics}) => {
                </span>
                <span className='mx-4'>
                  <h5>200+</h5>
-                <small className='text-secondary'>clients</small>
+                <small className='text-secondary'>Clients</small>
                </span>
       </div>
     </div>
   )
 }
-
 export default Statistics
