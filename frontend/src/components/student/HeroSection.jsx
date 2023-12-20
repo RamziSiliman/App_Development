@@ -2,7 +2,6 @@ import React from 'react'
 import {FaArrowRight} from 'react-icons/fa'
 import Statistics from './Statistics'
 const HeroSection = () => {
-  
   return (
     <div className='s-home-hero-section  position-relative bg-room fixed-bg  text-light  d-flex align-items-center justify-content-center flex-column'>
       <div className=" container d-flex align-items-center justify-content-center flex-column">
@@ -18,5 +17,4 @@ const HeroSection = () => {
     </div>
   )
 }
-
 export default HeroSection
