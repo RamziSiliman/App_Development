@@ -21,8 +21,7 @@ getHostelRooms(setLoading,setRooms, SERVER_URL, id )
             {
                 rooms.length > 0 ? rooms.filter(room=>!((room.occupants).includes(jwtDecode(JSON.parse(localStorage.getItem('authtokens')).access).user_id))).map(room=><Room room = {room} key={room.id}/>):
                 <p className="text-center">No rooms available</p>
-            }
-            
+            } 
         </div>
           }
 
