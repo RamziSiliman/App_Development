@@ -120,9 +120,7 @@ const Paypal = () => {
               !transaction ? <div >
                 <div className='my-2'>You are about to make payment of $26 for booking room {pendingRoom && pendingRoom.number}</div>
                 <div ref={paypal}>
-
                 </div>
-
               </div>:
               <div className="my-2">
                 <p>You have successfully paid $26 for booking room {pendingRoom.number}</p>
@@ -131,7 +129,6 @@ const Paypal = () => {
               </button>
               </div>
             }
-            
           </div>
         </div>
       </div>
@@ -139,5 +136,4 @@ const Paypal = () => {
     </div>
   );
 };
-
 export default Paypal;
