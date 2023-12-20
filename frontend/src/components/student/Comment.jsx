@@ -1,6 +1,5 @@
 
-//Comment
-
+//React comment
 import React from 'react'
 
 const Comment = () => {
