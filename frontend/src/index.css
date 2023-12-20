@@ -66,9 +66,7 @@ body{
 }
 .custom-card{
     width: 25vw;
-
 } 
-
 .img{
     height: 30vh;
     width: 100%;
@@ -189,9 +187,7 @@ width: 4px;
     }
     .custom-card{
         width: 90vw;
-        
-    }
-    
+    }   
 }
 @media (max-width: 320px){
     .s-home-hero-section{
