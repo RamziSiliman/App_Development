@@ -27,7 +27,6 @@ const UplaodRoom = ({updaterooms}) => {
         <Input placeholder={'Enter the price for the room'} inputType={'number'} label={'Room price (per month)'} value={roomprice} setter={setroomprice}/>
         <label htmlFor="" className="">Select a photo for the room</label>
         <input type="file" className='my-4' accept='image/*' onChange={(e)=>setroomimage(e.currentTarget.files)}/>
-
         <button className="btn btn-success border-0 px-4 py 2" data-bs-dismiss="modal" type='button' onClick={()=>uploadRoom(setLoading,SERVER_URL,roomnumber,roomcapacity,roomprice,roomimage,updaterooms)}><small>Confirm upload</small></button>
       </div>
     </div>
@@ -36,5 +35,4 @@ const UplaodRoom = ({updaterooms}) => {
   </div>
   )
 }
-
 export default UplaodRoom
